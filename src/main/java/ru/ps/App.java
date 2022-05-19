@@ -152,8 +152,13 @@ public class App {
 
         if (rowObj != null) {
             cellObj = rowObj.getCell(column);
-            resultReadFromCell = cellObj.toString();
+            if (cellObj != null) {
+                resultReadFromCell = cellObj.toString();
+            } else {
+                resultReadFromCell = "";
+            }
         }
+
         return resultReadFromCell;
     }
 
